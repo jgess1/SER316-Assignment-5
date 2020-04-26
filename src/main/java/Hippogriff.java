@@ -4,7 +4,7 @@ public class Hippogriff extends Animal {
     
     public Hippogriff() {
         name = "hippogriff";
-        salesItem = "hippogriff egg(s)";
+        salesItem = "hippogriff eggs";
         purchasePrice = 500;
         productSalesPrice = 25;
     }    

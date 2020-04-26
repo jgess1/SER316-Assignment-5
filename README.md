@@ -21,3 +21,10 @@ Second Commit:
 Added builder pattern to facilitate requirements 1, 2, and 9.
 Added mediator pattern to facilitate requirements 3, 4, and 17.
 Added iterator pattern to facilitate requirements 10, 13, some of 14, and 17.
+
+Third Commit:
+Refactored builder to add a name for each farm.
+Added the farm's name to the product update outputs.
+Added a money goal end condition to the simulator.
+Added functionality to removed dead products from the farm's product list.
+Set Globals variables to private and added getters and setters to access them.

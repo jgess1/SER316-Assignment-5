@@ -13,16 +13,20 @@ public class DayTimer {
     // Mediator pattern
     public DayTimer(int seconds) {
         
-        timer = new Timer();
-        if (isDay) {
-            timer.schedule(new Sunset(), seconds * 1000);
+        if(!checkGoal()) {
+            timer = new Timer();
+            if (isDay) {
+                timer.schedule(new Sunset(), seconds * 1000);
+            } else {
+                timer.schedule(new Sunrise(), seconds * 1000);
+            }
         } else {
-            timer.schedule(new Sunrise(), seconds * 1000);
+            System.out.println("Hooray!  We've reached our goal by earning "+Globals.getGold()+" gold coins!");
         }
     }
     
     //independent task
-    class Sunrise extends TimerTask {
+    static class Sunrise extends TimerTask {
         public void run() {
             System.out.println("It's a new day!  Sun's up!");
             isDay = true;
@@ -34,12 +38,17 @@ public class DayTimer {
     }
     
     //independent task
-    class Sunset extends TimerTask {
+    static class Sunset extends TimerTask {
         public void run() {
             System.out.println("The sun has set.  Night night.\n");
             isDay = false;
             new DayTimer(3);
         }
+    }
+    
+    //check if we are at our goal
+    private boolean checkGoal() {
+        return Globals.getGold() >= Globals.getGoldGoal();
     }
     
 }

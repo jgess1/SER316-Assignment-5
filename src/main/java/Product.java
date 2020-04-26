@@ -9,6 +9,7 @@ public class Product {
     public boolean canHarvest = false;
     public int harvestCounter = 0;
     private int cropReadyAge = 3;
+    protected boolean hasDied = false;
     
     public String getName() {
         return name;
@@ -34,19 +35,23 @@ public class Product {
         return harvestCounter;
     }
     
-    public void Harvested() {        
+    public void harvested() {        
         this.canHarvest = false;
         this.harvestCounter = 0;
     }
     
-    public void Age() {
+    public void age(Farm farm) {
         this.harvestCounter++;
-        System.out.println(this.name+" grows.");
+        System.out.println(this.name+" grows at "+farm.getName());
         
         //Check if crops old enough to harvest now
         if(this.harvestCounter >= cropReadyAge) {
             this.canHarvest = true;
             System.out.println(this.name+" will be ready to harvest tomorrow.");
         }
+    }
+    
+    public boolean hasDied() {
+        return hasDied;
     }
 }

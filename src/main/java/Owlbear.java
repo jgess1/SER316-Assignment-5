@@ -1,8 +1,6 @@
 package main.java;
 
 public class Owlbear extends Animal {
-
-public int age = 0;
     
     public Owlbear() {
         name = "owlbear";

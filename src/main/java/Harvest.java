@@ -10,7 +10,7 @@ public class Harvest {
     
     public Harvest() {
     
-        Iterator<Farm> farmIterator = Globals.farmList.iterator();
+        Iterator<Farm> farmIterator = Globals.getFarmList().iterator();
         
         while (farmIterator.hasNext()) {
             
@@ -23,13 +23,16 @@ public class Harvest {
                 Product product = productIterator.next();
                 
                 if (product.canHarvest) {
-                    Globals.gold += product.productSalesPrice;
-                    System.out.println("Farm sold "+product.getSalesItem()+" for "+product.productSalesPrice+" gold coins.");
-                    System.out.println("Gold increased to "+Globals.gold+" coins.\n");
-                    product.Harvested();
+                    Globals.addGold(product.productSalesPrice);
+                    System.out.println(farm.getName()+" sold "+product.getSalesItem()+" for "+product.productSalesPrice+" gold coins.");
+                    System.out.println("Gold increased to "+Globals.getGold()+" coins.\n");
+                    product.harvested();
                 } else {
-                    product.Age();
-                }
+                    product.age(farm);                    
+                    if (product.hasDied()) {  //remove the animal from the list if it died.
+                        productIterator.remove();
+                    }
+                }                
             }
         }
     }     

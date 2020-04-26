@@ -11,6 +11,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Farm {
     
     public static class Builder {
+        private String name = "Farm";
         private Product product;
         private int productQty = 2;  // default 
         private int farmerQty = 1;  // default        
@@ -21,6 +22,11 @@ public class Farm {
         
         public Farm build() {
             return new Farm(this);
+        }
+        
+        public Builder name(String name) {
+            this.name = name;
+            return this;  // return builder object
         }
         
         public Builder product(Product product) {
@@ -39,6 +45,7 @@ public class Farm {
         }
     }
         
+    private String name;
     private Product product;
     private int productQty;
     private int farmerQty;
@@ -47,6 +54,8 @@ public class Farm {
     public List<Product> productList = new ArrayList<Product>();
     
     private Farm(Builder builder) {
+        
+        this.name = builder.name;
         
         // if product not supplied by call randomize product 
         if (builder.product == null) {            
@@ -73,7 +82,9 @@ public class Farm {
                 break;
             case 7:
                 this.product = new Hippogriff();                
-                break;  
+                break;
+            default:
+                break;
             }
             
         } else {
@@ -84,9 +95,14 @@ public class Farm {
         this.productQty = builder.productQty;
         this.farmerQty = builder.farmerQty;
         
+        System.out.println("Name: "+name);
         System.out.println("Product type: "+getProductName());
         System.out.println("Product Qty: "+productQty);
         System.out.println("Number of Farmers: "+farmerQty+"\n");
+    }
+    
+    public String getName() {
+        return name;
     }
     
     public String getProductName() {
