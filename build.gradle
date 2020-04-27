@@ -38,7 +38,7 @@ tasks.withType(Checkstyle) {
     }
 }
 checkstyle {
-      toolVersion = "8.3"
+      toolVersion = "7.6.1"
 }
 
 

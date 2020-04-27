@@ -28,3 +28,7 @@ Added the farm's name to the product update outputs.
 Added a money goal end condition to the simulator.
 Added functionality to removed dead products from the farm's product list.
 Set Globals variables to private and added getters and setters to access them.
+
+Fourth Commit:
+Added more test cases to get coverage over 80%.
+Various fixes and tweaks.

@@ -39,15 +39,15 @@ public class Product {
         this.canHarvest = false;
         this.harvestCounter = 0;
     }
-    
+        
     public void age(Farm farm) {
         this.harvestCounter++;
-        System.out.println(this.name+" grows at "+farm.getName());
+        System.out.println(this.name + " grows at " + farm.getName());
         
         //Check if crops old enough to harvest now
-        if(this.harvestCounter >= cropReadyAge) {
+        if (this.harvestCounter >= cropReadyAge) {
             this.canHarvest = true;
-            System.out.println(this.name+" will be ready to harvest tomorrow.");
+            System.out.println(this.name + " will be ready to harvest tomorrow.");
         }
     }
     

@@ -9,11 +9,14 @@ public class DayTimer {
     private static boolean isDay = false;
     private static int dayCount = 0;
     
+    public void setIsDay(boolean isDay) {
+        this.isDay = isDay;
+    }    
     
     // Mediator pattern
     public DayTimer(int seconds) {
         
-        if(!checkGoal()) {
+        if (!checkGoal()) {
             timer = new Timer();
             if (isDay) {
                 timer.schedule(new Sunset(), seconds * 1000);
@@ -21,7 +24,8 @@ public class DayTimer {
                 timer.schedule(new Sunrise(), seconds * 1000);
             }
         } else {
-            System.out.println("Hooray!  We've reached our goal by earning "+Globals.getGold()+" gold coins!");
+            System.out.println("Hooray!  We've reached our goal by earning "
+                    + Globals.getGold() + " gold coins!");
         }
     }
     
@@ -31,7 +35,7 @@ public class DayTimer {
             System.out.println("It's a new day!  Sun's up!");
             isDay = true;
             dayCount++;
-            System.out.println("Day: "+dayCount);
+            System.out.println("Day: " + dayCount);
             new DayTimer(3);
             new Harvest();
         }

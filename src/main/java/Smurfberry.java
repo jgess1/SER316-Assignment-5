@@ -1,6 +1,6 @@
 package main.java;
 
-public class Smurfberry extends Product{
+public class Smurfberry extends Product {
     
     public Smurfberry() {
         name = "smurfberry bush";

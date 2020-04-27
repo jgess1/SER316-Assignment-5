@@ -2,12 +2,13 @@ package test.java;
 
 import static org.junit.Assert.assertEquals;
 
-import main.java.DayTimer;
+import main.java.Globals;
+import main.java.Main;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class DayTimerTest {
+public class MainTest {
 
     @Before
     public void setUp() throws Exception {
@@ -18,10 +19,10 @@ public class DayTimerTest {
     }
 
     @Test
-    public void test() {
-        DayTimer day = new DayTimer(3);
-        day.setIsDay(true);
-        DayTimer night = new DayTimer(3);        
+    public void initTest() {
+        Main.init();
+        assertEquals(100, Globals.getGold());
+        assertEquals(600, Globals.getGoldGoal());
     }
 
 }

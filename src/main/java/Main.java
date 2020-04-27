@@ -5,14 +5,14 @@ import java.util.List;
 public class Main {    
     
     public static void init() {             
-        System.out.println("Starting amount of gold coins: "+Globals.getGold()+"\n");
+        System.out.println("Starting amount of gold coins: " + Globals.getGold() + "\n");
         System.out.println("Building first farm.");
         
         Farm.Builder builder = new Farm.Builder(); //create farm with Builder
         builder.name("Bilbo's Farm").product(new Unicorn());  //specifies name and product
         System.out.println("First farm built:");
         Farm farm1 = builder.build(); //build instance
-        farm1.productList.add(new Gummiberry());  // add a second product to the first farm's product list.
+        farm1.productList.add(new Gummiberry());  // add a second product to farm's list.
         List<Farm> farmList = Globals.getFarmList();
         farmList.add(farm1);
         
@@ -28,7 +28,7 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Welcome to Fantasy Farms!\n");
-        System.out.println("Our goal is to make "+Globals.getGoldGoal()+" gold coins!\n");
+        System.out.println("Our goal is to make " + Globals.getGoldGoal() + " gold coins!\n");
         
         init();       
         

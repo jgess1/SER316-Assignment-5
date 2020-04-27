@@ -83,7 +83,7 @@ public class Farm {
             case 7:
                 this.product = new Hippogriff();                
                 break;
-            default:
+            default:                
                 break;
             }
             
@@ -95,10 +95,10 @@ public class Farm {
         this.productQty = builder.productQty;
         this.farmerQty = builder.farmerQty;
         
-        System.out.println("Name: "+name);
-        System.out.println("Product type: "+getProductName());
-        System.out.println("Product Qty: "+productQty);
-        System.out.println("Number of Farmers: "+farmerQty+"\n");
+        System.out.println("Name: " + name);
+        System.out.println("Product type: " + getProductName());
+        System.out.println("Product Qty: " + productQty);
+        System.out.println("Number of Farmers: " + farmerQty + "\n");
     }
     
     public String getName() {
