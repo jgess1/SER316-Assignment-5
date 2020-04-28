@@ -1,5 +1,14 @@
 package main.java;
 
+/**
+ * 
+ * @author Jeremy Gess
+ * 
+ * This class adds the methods and attributes to track
+ * the animals age and allow it to die of old age.
+ *
+ */
+
 public class Animal extends Product {
     
     public int age = 0;

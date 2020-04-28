@@ -1,5 +1,13 @@
 package main.java;
 
+/**
+ * 
+ * @author Jeremy Gess
+ * 
+ * The Gummiberry product class.
+ *
+ */
+
 public class Gummiberry extends Product {
     
     public Gummiberry() {

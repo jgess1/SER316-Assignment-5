@@ -4,8 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
-/* Builder design pattern
- * Satisfies requirements 1, 2, 7, and 9
+/**
+ * 
+ * @author Jeremy Gess
+ * 
+ * Farm uses the Builder design pattern to generate farms.
+ * None, some, or all parameters can be supplied by the caller.
+ *
+ * Used for accomplishing requirements 1, 2, 7, and 9
+ *
  */
 
 public class Farm {

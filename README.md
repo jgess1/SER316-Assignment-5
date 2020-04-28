@@ -32,3 +32,7 @@ Set Globals variables to private and added getters and setters to access them.
 Fourth Commit:
 Added more test cases to get coverage over 80%.
 Various fixes and tweaks.
+
+Fifth Commit:
+Fixed the last of the Spotbug errors.
+Documented the classes.

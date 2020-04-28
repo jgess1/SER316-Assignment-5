@@ -2,8 +2,15 @@ package main.java;
 
 import java.util.Iterator;
 
-/*  Harvest class uses two iterators, one to iterate through the list of farms, 
- *  the other to iterate through the product list of each farm.
+/**
+ * 
+ * @author Jeremy Gess
+ * 
+ * Harvest class uses the Iterator design pattern and two Iterators; 
+ * one to iterate through the list of farms, the other to iterate 
+ * through the product list of each farm.
+ * 
+ * Used for accomplishing requirements 10, 14, 15, and 17.
  */
 
 public class Harvest {

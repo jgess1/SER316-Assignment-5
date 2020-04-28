@@ -1,5 +1,13 @@
 package main.java;
 
+/**
+ * 
+ * @author Jeremy Gess
+ * 
+ * The Unicorn animal class.
+ *
+ */
+
 public class Unicorn extends Animal {
     
     public Unicorn() {

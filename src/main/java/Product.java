@@ -1,5 +1,16 @@
 package main.java;
 
+/**
+ * 
+ * @author Jeremy Gess
+ * 
+ * The super class for the crops and animals that are kept on
+ * the farms.  A few of the methods are overridden on the 
+ * Animal class.  Most methods and attributes come from
+ * this class.
+ *
+ */
+
 public class Product {
     
     protected String name;

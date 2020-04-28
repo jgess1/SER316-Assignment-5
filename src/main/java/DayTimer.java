@@ -3,15 +3,23 @@ package main.java;
 import java.util.Timer;
 import java.util.TimerTask;
 
+/**
+ * 
+ * @author Jeremy Gess
+ * 
+ * DayTimer uses the Mediator pattern to handle the 
+ * scheduling of the timers for the day and night
+ * cycles.
+ * 
+ * Used for accomplishing requirements 3, 4, and 17.
+ *
+ */
+
 public class DayTimer {
 
     private Timer timer;
     private static boolean isDay = false;
     private static int dayCount = 0;
-    
-    public void setIsDay(boolean isDay) {
-        this.isDay = isDay;
-    }    
     
     // Mediator pattern
     public DayTimer(int seconds) {

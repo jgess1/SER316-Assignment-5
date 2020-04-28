@@ -1,5 +1,13 @@
 package main.java;
 
+/**
+ * 
+ * @author Jeremy Gess
+ * 
+ * The Owlbear animal class.
+ *
+ */
+
 public class Owlbear extends Animal {
     
     public Owlbear() {

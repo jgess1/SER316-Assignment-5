@@ -3,8 +3,6 @@ package test.java;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import java.util.ArrayList;
-import java.util.List;
 import main.java.Animal;
 import main.java.Farm;
 import main.java.Fireflower;
@@ -29,7 +27,6 @@ public class ProductTest {
     Animal owlbear = new Owlbear();
     Animal hippogriff = new Hippogriff();
     Product testGummiHarvest = new Gummiberry();
-    List<Product> productList = new ArrayList<Product>();
     Farm.Builder builder1 = new Farm.Builder();
     Farm.Builder builder2 = new Farm.Builder();
     

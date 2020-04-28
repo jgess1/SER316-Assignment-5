@@ -29,6 +29,7 @@ checkstyle {
     // Keep checkstyle a little quieter
  	ignoreFailures = true
     showViolations = false
+    toolVersion = "7.6.1"
 }
 
 tasks.withType(Checkstyle) {
@@ -37,10 +38,6 @@ tasks.withType(Checkstyle) {
       xml.enabled = false
     }
 }
-checkstyle {
-      toolVersion = "7.6.1"
-}
-
 
 /////////////////////////////////////////////////////////////////////////
 // Configure SpotBugs

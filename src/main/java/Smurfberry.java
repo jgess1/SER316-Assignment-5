@@ -1,5 +1,13 @@
 package main.java;
 
+/**
+ * 
+ * @author Jeremy Gess
+ * 
+ * The Smurfberry product class.
+ *
+ */
+
 public class Smurfberry extends Product {
     
     public Smurfberry() {

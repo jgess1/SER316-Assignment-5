@@ -1,5 +1,13 @@
 package main.java;
 
+/**
+ * 
+ * @author Jeremy Gess
+ * 
+ * The Fireflower product class.
+ *
+ */
+
 public class Fireflower extends Product {
     
     public Fireflower() {

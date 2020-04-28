@@ -1,5 +1,13 @@
 package main.java;
 
+/**
+ * 
+ * @author Jeremy Gess
+ * 
+ * The Jumjum product class.
+ *
+ */
+
 public class Jumjum extends Product {
     
     public Jumjum() {
